@@ -5,13 +5,17 @@ import java.net.Socket;
 
 public class EncryptedClient
 {
+
     public static void main(String[] args) {
         try {
+
             Socket socket = new Socket("localhost", 8080);
 
             // the frame here;
             MessageFrameGUI messageFrameGUI = new MessageFrameGUI(10,10,socket);
 
-        }catch (IOException e) {}
+        }catch (IOException e) {
+            System.out.println("Im Here");
+        }
     }
 }
